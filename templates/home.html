@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Landing page</title>
+</head>
+<body>
+    {% if user.is_authenticated %}
+        <h2>Bienbenido {{ user.username }}</h2>
+        <a href="{% url 'logout'  %}">Salir</a>
+    {% else %}
+        <a href="{% url 'social:begin' 'facebook' %}">Inicia con facebook</a>
+    {% endif %}
+
+</body>
+</html>

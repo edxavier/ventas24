@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Completar registro</title>
+</head>
+<body>
+<h2>Terminando el registro</h2>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="nombre de usuario" value="{{ usuario }}" readonly/>
+        <input type="text" placeholder="numero de contacto" name="password"/>
+        <input type="submit" value="Guardar"/>
+    </form>
+</body>
+</html>
